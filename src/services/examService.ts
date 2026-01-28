@@ -117,7 +117,7 @@ export async function getExams(params?: {
   if (params?.exam_type) p.exam_type = params.exam_type;
 
   //  PASS PARAMS TO BACKEND
-  const resp = await api.get<ExamOut[]>("/exams", { params: p });
+  const resp = await api.get<ExamOut[]>("/exams/", { params: p });
   return resp.data;
 }
 
@@ -196,3 +196,4 @@ export async function downloadExamCsv(examId: number, filename?: string) {
   link.click();
   URL.revokeObjectURL(url);
 }
+
