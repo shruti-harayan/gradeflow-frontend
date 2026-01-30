@@ -150,7 +150,7 @@ export async function downloadMergedExamCsv(
 export async function createExam(
   payload: ExamCreatePayload
 ): Promise<ExamOut> {
-  const res = await api.post<ExamOut>("/exams", payload);
+  const res = await api.post<ExamOut>("/exams/", payload);
   return res.data;
 }
 
@@ -197,4 +197,5 @@ export async function downloadExamCsv(examId: number, filename?: string) {
   link.click();
   URL.revokeObjectURL(url);
 }
+
 
