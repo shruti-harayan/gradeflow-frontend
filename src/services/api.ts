@@ -9,7 +9,7 @@ if (!API_BASE) {
 
 export const api = axios.create({
   baseURL: API_BASE,
- withCredentials: true,
+ withCredentials: false,
 });
 
 export function setAuthToken(token: string | null) {
@@ -26,4 +26,5 @@ const token = localStorage.getItem("gf_token");
 if (token) {
   api.defaults.headers.common["Authorization"] = `Bearer ${token}`;
 }
+
 
