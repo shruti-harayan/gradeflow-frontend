@@ -1749,7 +1749,7 @@ export default function MarksEntry() {
             <button
               type="button"
               onClick={handleSaveToServer}
-              title="Save marks to server"
+              title="Save marks to database (you should do this regularly to avoid losing data)"
               disabled={
                 !examId ||
                 examId <= 0 ||
@@ -1762,8 +1762,8 @@ export default function MarksEntry() {
               className={
                 "rounded-lg border border-slate-700 px-4 py-2 text-xs font-medium " +
                 (examId && examId > 0
-                  ? "bg-green-500 text-slate-100 hover:bg-green-700"
-                  : "bg-green-500/60 text-slate-500 cursor-not-allowed") +
+                  ? "bg-yellow-600 text-slate-100 hover:bg-yellow-500"
+                  : "bg-yellow-500/60 text-slate-500 cursor-not-allowed") +
                 (disabled ? " opacity-50 cursor-not-allowed" : "")
               }
             >
